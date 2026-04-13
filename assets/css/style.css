@@ -1,0 +1,469 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #6c63ff;
+    --primary-dark: #574fd6;
+    --dark: #1a1a2e;
+    --gray: #f4f4f8;
+    --text: #333;
+    --white: #ffffff;
+    --background--hero--first: #f8f7ff;
+    --background--hero--second: #e8e6ff;
+}
+
+.dark{
+    --primary: #8b85ff;
+    --primary-dark: #6c63ff;
+    --dark: #0f0f1a;
+    --gray: #1c1c2e;
+    --text: #e4e4e7;
+    --white: #121212;
+    --background--hero--first: #0f0f1a;
+    --background--hero--second: #1c1c2e ;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: var(--white);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 6%;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav ul a:hover {
+    color: var(--primary);
+}
+
+nav .nav-cta {
+    background: var(--primary);
+    color: var(--white) !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    transition: background 0.2s !important;
+}
+
+nav .nav-cta:hover {
+    background: var(--primary-dark);
+    color: var(--white) !important;
+}
+
+.theme-switch {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  direction: rtl;
+}
+
+#theme-checkbox {
+  display: none;
+}
+
+#theme-checkbox + label {
+  font-size: 2rem;
+  height: 1em;
+  width: 2.5em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  background-color: #cecece;
+  position: relative;
+}
+
+#theme-checkbox:checked + label {
+  background-color: #3a3a3a;
+}
+
+#theme-checkbox + label:active {
+  transform: scale(0.85);
+  transition: transform 0.2s;
+}
+
+#theme-checkbox + label div {
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: inherit;
+  position: absolute;
+  top: 0.1em;
+  left: 0.1em;
+  z-index: 10;
+  transition: 0.5s cubic-bezier(1, 0.33, 0.11, 1.34);
+  background-color: #f2f2f2;
+}
+
+#theme-checkbox:checked + label div {
+  /* left: calc(2.5em - .8em - .1em); */
+  left: 1.6em;
+  background-color: #212121;
+}
+
+#theme-checkbox + label span {
+  display: flex;
+}
+
+#theme-checkbox + label svg {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  padding: 0.15em;
+  box-sizing: border-box;
+}
+
+#theme-checkbox + label span:first-of-type {
+  color: #3a3a3a;
+}
+
+#theme-checkbox + label span:last-of-type {
+  color: #cecece;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 5rem 6%;
+    background: linear-gradient(135deg, var(--background--hero--first) 0%, var(--background--hero--second) 100%);
+    min-height: 90vh;
+}
+
+.hero-text {
+    max-width: 560px;
+}
+
+.hero-text h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+}
+
+.hero-text h1 span {
+    color: var(--primary);
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    margin-left: 1rem;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 500px;
+}
+
+.hero-image .mockup {
+    width: 500px;
+    height: 500px;
+    background: var(--primary);
+    border-radius: 50%;
+    opacity: 0.12;
+    position: relative;
+}
+
+.hero-image .mockup::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: var(--primary);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+}
+
+.hero-form{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    max-width: 420px;
+    padding: 0 1rem;
+}
+
+.step-indicator {
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-align: center;
+}
+
+.lead-form {
+    width: 100%;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+    display: grid;
+    gap: 0.6rem;
+}
+
+.lead-form h3 {
+    margin-bottom: 0.4rem;
+    color: var(--text);
+}
+
+.lead-form label {
+    font-weight: 600;
+    color: var(--text);
+}
+
+.lead-form input,
+.lead-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font: inherit;
+    background: var(--white);
+    color: var(--text);
+}
+
+.lead-form textarea {
+    resize: vertical;
+}
+
+.lead-form .btn {
+    margin-top: 0.4rem;
+    border: 0;
+}
+
+.features {
+    padding: 5rem 6%;
+    text-align: center;
+    background: var(--white);
+}
+
+.section-title {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: var(--text);
+    margin-bottom: 0.6rem;
+}
+
+.section-sub {
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background: var(--gray);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(108,99,255,0.15);
+}
+
+.card .icon {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.how {
+    padding: 5rem 6%;
+    background: var(--gray);
+    text-align: center;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.step {
+    max-width: 220px;
+    text-align: center;
+}
+
+.step .step-num {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--text);
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.step h3 {
+    margin-bottom: 0.4rem;
+    color: var(--text);
+}
+
+.step p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: var(--text);
+    text-align: center;
+    padding: 5rem 6%;
+}
+
+.cta-section h2 {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.btn-white {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.btn-white:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+footer {
+    background: var(--dark);
+    color: #aaa;
+    text-align: center;
+    padding: 2rem 6%;
+    font-size: 0.9rem;
+}
+
+footer span {
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 6%;
+        min-height: unset;
+    }
+
+    .hero-image {
+        display: flex;
+        min-height: unset;
+        width: 100%;
+        margin-top: 1.2rem;
+    }
+
+    .hero-image .mockup {
+        display: none;
+    }
+
+    .hero-form {
+        position: static;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .btn-outline {
+        margin-left: 0;
+        margin-top: 0.8rem;
+    }
+
+    nav ul {
+        display: none;
+    }
+}
