@@ -14,6 +14,7 @@ Pontos do projeto:
 - Formulário funcional
 - Design moderno e responsivo
 - Perguntas Frequentes (FAQ)
+- Acessibilidade
 
 ## Ferramentas utilizadas
 
@@ -25,10 +26,24 @@ Pontos do projeto:
 
 ## Passo a passo de como rodar
 
+### 1º passo:
+
+Clonar o repositório no "XAMPP" ou "WAMP"
+dentro da pasta.
+
+``` bash
+htdocs/
+```
+
+### 2º passo:
+Criar o banco de dados no seu SGDB.
 
 ``` bash
 CREATE DATABASE launchExpress;
 ```
+
+### 3º passo:
+Criar a tabela chamados para poder fazer a inserção dos dados.
 
 ``` bash
 CREATE TABLE chamados(
@@ -39,3 +54,17 @@ CREATE TABLE chamados(
     -> mensagem text not null,
     -> data_envio timestamp not null default current_timestamp);
 ```
+
+### 3º passo:
+Colocar a url de localhost do seu navegador.
+``` bash
+http://localhost/teste-frontend-developer/index.php
+```
+### --> Pronto agora basta ir no formulário da página e solicitar o seu site
+
+---
+
+Obrigado por me dar a oportunidade de realizar esse teste.
+### Autor: Breno Tadeu.
+
+
