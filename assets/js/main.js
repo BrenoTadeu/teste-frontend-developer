@@ -146,8 +146,7 @@ function initScrollReveal() {
         });
         return;
     }
-
-    // Animates each item once, then releases observer resources.
+    
     const observer = new IntersectionObserver((entries, currentObserver) => {
         entries.forEach((entry) => {
             if (!entry.isIntersecting) {

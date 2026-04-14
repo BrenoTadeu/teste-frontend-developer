@@ -6,9 +6,6 @@ Olá! Seja bem-vindo ao LaunchExpress, uma landing page desenvolvida para facili
 
 projeto **LaunchExpress** foi criado, para que qualquer pessoa que queria alanvacar a sua idea ou seu negócio.
 
-<img src="imgsReadme/wireframe.png" width="300" />
-<img src="imgsReadme/wireframeLight.png" width="300" />
-
 Pontos do projeto:
 - Facilidade na criação do projeto
 - Formulário funcional
@@ -60,6 +57,10 @@ Colocar a url de localhost do seu navegador.
 http://localhost/teste-frontend-developer/index.php
 ```
 ### --> Pronto agora basta ir no formulário da página e solicitar o seu site
+
+## Review do site
+<img src="imgsReadme/wireframe.png" width="300" />
+<img src="imgsReadme/wireframeLight.png" width="300" />
 
 ---
 
