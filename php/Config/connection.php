@@ -1,11 +1,11 @@
 <?php
 $host = "localhost";
 $user = "root";
-$pass = "";
-$db = "testeFront";
+$pass = "breno@banco";
+$db = "launchExpress";
 
 try{
-    $PDO = new PDO("msyql:host=$host;dbname=$db;charset=utf8", $user, $pass);
+    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 }catch(PDOException $e){

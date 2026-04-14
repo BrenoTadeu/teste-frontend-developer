@@ -5,36 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LaunchExpress</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/imgs/logo-removebg-preview.png" type="image/x-icon">
 </head>
 
 <body>
 
-    <nav>
-        <div class="logo">LaunchExpress</div>
-        <ul>
+    <nav aria-label="Navegação principal">
+        <div class="logo"><img src="assets/imgs/logo-removebg-preview.png" alt="LaunchExpress Logo">LaunchExpress</div>
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="main-menu">
             <li><a href="#features">Recursos</a></li>
+            <li><a href="#faq">Perguntas frequentes</a></li>
             <li><a href="#how">Como funciona</a></li>
-            <div class="theme-switch">
-                <input type="checkbox" id="theme-checkbox" onclick="toggleTheme()" />
-                <label for="theme-checkbox">
-                    <div></div>
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                            <path fill-rule="evenodd"
-                                d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </span>
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                            <path
-                                d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z">
-                            </path>
-                        </svg>
-                    </span>
-                </label>
-            </div>
+            <li>
+                <div class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <label for="theme-checkbox">
+                        <div></div>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path
+                                    d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z">
+                                </path>
+                            </svg>
+                        </span>
+                    </label>
+                </div>
+            </li>
         </ul>
     </nav>
 
@@ -42,7 +51,7 @@
         <div class="hero-text">
             <h1>Criação de sites com qualidade, <span>confiança</span> e velocidade</h1>
             <p>Tudo que você precisa para criar, lançar e escalar sua ideia — numa plataforma simples e poderosa.</p>
-            <a href="#cta" class="btn btn-primary">Começar grátis</a>
+            <button class="btn btn-primary" id="btn-header">Começar grátis</button>
             <a href="#features" class="btn btn-outline">Saiba mais</a>
         </div>
         <div class="hero-image">
@@ -59,7 +68,7 @@
                     <input type="email" id="email" name="email" required>
 
                     <label for="telefone">Telefone</label>
-                    <input type="text" id="telefone" name="telefone" required>
+                    <input type="number" id="telefone" name="telefone" required maxlength="12">
 
                     <label for="mensagem">Mensagem</label>
                     <textarea id="mensagem" name="mensagem" rows="4" required maxlength="250"></textarea>
@@ -69,8 +78,27 @@
             </div>
         </div>
     </section>
-
-
+    <section class="about">
+        <div class="about-content">
+            <div class="about-image">
+                <div class="first-image">
+                    <img src="assets/imgs/marketLaunch.png" alt="Sobre a LaunchExpress">
+                </div>
+                <div class="second-image">
+                    <img src="assets/imgs/blogPost.png" alt="Editor de conteúdo da LaunchExpress para publicação de posts">
+                </div>
+            </div>
+            <div class="about-text">
+                <span class="about-kicker">Nossa essência</span>
+                <h2>Sobre a LaunchExpress</h2>
+                <p>A LaunchExpress nasceu da paixão por tecnologia e inovação, com a missão de democratizar o acesso a
+                    ferramentas de criação de sites. Nossa plataforma é projetada para ser intuitiva e poderosa,
+                    permitindo que qualquer pessoa, independentemente de sua experiência técnica, possa criar um site
+                    incrível em minutos. Com uma equipe dedicada e uma comunidade vibrante, estamos aqui para ajudar
+                    você a transformar suas ideias em realidade.</p>
+            </div>
+        </div>
+    </section>
     <section class="features" id="features">
         <h2 class="section-title">Por que escolher a LaunchExpress?</h2>
         <p class="section-sub">Pensado para você que quer alavancar em resultados</p>
@@ -98,39 +126,97 @@
         </div>
     </section>
 
-    <section class="how" id="how">
-        <h2 class="section-title">Como funciona</h2>
-        <p class="section-sub">Três passos simples para começar hoje mesmo.</p>
-        <div class="steps">
-            <div class="step">
-                <div class="step-num">1</div>
-                <h3>Crie sua conta</h3>
-                <p>Cadastre-se gratuitamente em menos de 1 minuto, sem cartão de crédito.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">2</div>
-                <h3>Configure seu projeto</h3>
-                <p>Use nossos templates prontos ou comece do zero com total liberdade.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">3</div>
-                <h3>Lance e escale</h3>
-                <p>Publique com um clique e acompanhe seu crescimento em tempo real.</p>
-            </div>
+    <section class="faq" id="faq">
+        <h2 class="section-title">Perguntas frequentes</h2>
+        <p class="section-sub">Respostas rápidas para você começar com confiança.</p>
+
+        <div class="faq-list">
+            <details class="faq-item" open>
+                <summary>Preciso saber programar para usar a LaunchExpress?</summary>
+                <p>Não. A plataforma foi criada para iniciantes e profissionais, com templates prontos e edição intuitiva para criar páginas rapidamente.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Em quanto tempo meu site pode ficar no ar?</summary>
+                <p>Na maioria dos casos, em poucos minutos. Você cria a estrutura, personaliza o conteúdo e publica com poucos cliques.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Posso usar domínio próprio no meu projeto?</summary>
+                <p>Sim. Você pode conectar seu domínio para fortalecer sua marca e manter uma presença digital profissional.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>A LaunchExpress oferece suporte técnico?</summary>
+                <p>Sim. Nosso time está disponível para ajudar na configuração, publicação e otimização do seu site.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Meus dados estão protegidos?</summary>
+                <p>Sim. Trabalhamos com boas práticas de segurança e infraestrutura estável para manter seus dados e os de seus clientes protegidos.</p>
+            </details>
         </div>
     </section>
 
-    <section class="cta-section" id="cta">
-        <h2>Pronto para começar?</h2>
-        <p>Junte-se a milhares de empreendedores que já estão crescendo com a LaunchExpress.</p>
-        <a href="#" class="btn btn-white">Criar conta grátis</a>
+    <section class="how" id="how">
+        <div class="how-layout">
+            <div class="how-main">
+                <h2 class="section-title">Como funciona</h2>
+                <p class="section-sub">Três passos simples para começar hoje mesmo.</p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <h3>Crie sua conta</h3>
+                        <p>Cadastre-se gratuitamente em menos de 1 minuto, sem cartão de crédito.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <h3>Configure seu projeto</h3>
+                        <p>Use nossos templates prontos ou comece do zero com total liberdade.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <h3>Lance e escale</h3>
+                        <p>Publique com um clique e acompanhe seu crescimento em tempo real.</p>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="how-cta" id="cta">
+                <h2>Pronto para começar?</h2>
+                <p>Junte-se a milhares de empreendedores que já estão crescendo com a LaunchExpress.</p>
+                <button class="btn btn-white" id="btn-final">Começar agora</button>
+            </aside>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 <span>LaunchExpress</span>. Todos os direitos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/imgs/logo-removebg-preview.png" alt="LaunchExpress logo">
+                    <strong>LaunchExpress</strong>
+                </div>
+                <p>Crie, publique e escale seu projeto digital com velocidade, estabilidade e suporte próximo de verdade.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Links rápidos</h3>
+                <ul>
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#faq">Perguntas frequentes</a></li>
+                    <li><a href="#how">Como funciona</a></li>
+                    <li><a href="#cta">Começar agora</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 <span>LaunchExpress</span>. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
-    <script src="/assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 
