@@ -47,12 +47,11 @@ Criar a tabela chamados para poder fazer a inserção dos dados.
 
 ``` bash
 CREATE TABLE chamados(
-    -> id_chamado int(11) not null auto_increment primary key,
-    -> nome varchar(50) not null,
-    -> email varchar(100) not null,
-    -> telefone varchar(20) not null,
-    -> mensagem text not null,
-    -> data_envio timestamp not null default current_timestamp);
+id_chamado int(11) not null auto_increment primary key,nome varchar(50) not null,
+email varchar(100) not null,
+telefone varchar(20) not null,
+mensagem text not null,
+data_envio timestamp not null default current_timestamp);
 ```
 
 ### 3º passo:
