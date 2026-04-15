@@ -4,7 +4,7 @@ Olá! Seja bem-vindo ao LaunchExpress, uma landing page desenvolvida para facili
 
 ### Visualização
 
-[Clique aqui para ver o projeto em live!!](https://brenotadeu.github.io/teste-frontend-developer/)
+[Clique aqui para ver o frontend em live!!](https://brenotadeu.github.io/teste-frontend-developer/)
 
 ## Sobre
 
