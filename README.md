@@ -2,6 +2,10 @@
 
 Olá! Seja bem-vindo ao LaunchExpress, uma landing page desenvolvida para facilitar qualquer usuário na criação do seu site
 
+### Visualização
+
+[Clique aqui para ver o projeto em live!!](https://brenotadeu.github.io/teste-frontend-developer/)
+
 ## Sobre
 
 projeto **LaunchExpress** foi criado, para que qualquer pessoa que queria alanvacar a sua idea ou seu negócio.
